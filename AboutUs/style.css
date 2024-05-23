@@ -1,0 +1,222 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primaryColor: #45C4A0;
+    --secondaryColor: #3F78E0;
+    --font: "Manrope", sans-serif;
+    --titleColor: #343F52;
+    --paragraphColor: rgb(96, 105, 123);
+}
+
+body {
+    font-family: var(--font);
+}
+
+.aboutUsContainer {
+    background-color: #f2f2f2;
+}
+
+.aboutUs {
+    max-width: 1400px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    padding: 60px 40px;
+}
+
+.aboutUs .leftSide {
+    display: flex;
+    flex-basis: 50%;
+}
+.aboutUs .leftSide .aboutUsImg {
+    width: auto;
+    height: 800px;
+    object-fit: cover;
+    border-radius: 16px;
+}
+.aboutUs .leftSide .ourFeature {
+    align-self: center;
+    position: relative;
+    left: -80px;
+}
+.aboutUs .leftSide .ourFeature .feature {
+    width: 280px;
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 32px;
+    background-color: #fff;
+    box-shadow: rgba(181, 181, 196, 0.2) 0px 7px 29px 0px;
+}
+.aboutUs .leftSide .ourFeature .feature img{
+    width: 45px;
+    height: auto;
+    display: block;
+    margin-bottom: 18px;
+}
+.aboutUs .leftSide .ourFeature .feature h3 {
+    color: var(--titleColor);
+    text-transform: capitalize;
+    font-size: 22px;
+    margin-bottom: 8px;
+
+}
+.aboutUs .leftSide .ourFeature .feature p {
+    color: var(--paragraphColor);
+    font-size: 16px;
+    line-height: 22px;
+    margin-bottom: 16px;
+}
+.aboutUs .leftSide .ourFeature .feature a {
+    color: var(--primaryColor);
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+}
+.aboutUs .leftSide .ourFeature .feature a svg {
+    width: 18px;
+    margin-left: 3px;
+    transition: all .2s linear;
+}
+.aboutUs .leftSide .ourFeature .feature a:hover svg {
+    margin-left: 5px;
+}
+.aboutUs .rightSide {
+    align-self: center;
+}
+.aboutUs .rightSide h3 {
+    color: var(--titleColor);
+    font-size: 60px;
+    font-weight: 700;
+    margin-bottom: 12px;
+}
+.aboutUs .rightSide p {
+    color: var(--paragraphColor);
+    font-size: 18px;
+    line-height: 28px;
+    margin-bottom: 30px;
+    max-width: 500px;
+}
+.aboutUs .rightSide ul {
+    list-style-type: none;
+    margin:0;
+    padding: 0;
+}
+.aboutUs .rightSide ul li {
+    color: var(--primaryColor);
+    font-size: 20px;
+    margin-bottom: 14px;
+    margin-left: 35px;
+    position: relative;
+}
+.aboutUs .rightSide ul li::after {
+    content: "";
+    position: absolute;
+    left: -35px;
+    top: 3px;
+    background-image: url(./img/tic-icon.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 25px;
+    height: 25px;
+}
+.aboutUs .rightSide .btnGroup {
+    margin-top: 80px;
+}
+.aboutUs .rightSide .btnGroup button {
+    border: 2px solid var(--secondaryColor);
+    padding: 16px 32px;
+    border-radius: 4px;
+    font-size: 16px;
+    font-weight: 600;
+    text-transform: uppercase;
+    transition: all .3s linear;
+    cursor: pointer;
+}
+.aboutUs .rightSide .btnGroup button.services {
+    margin-right: 15px;
+    background: var(--secondaryColor);
+    color: #fff;
+}
+.aboutUs .rightSide .btnGroup button.services:hover {
+    background-color: transparent;
+    color: var(--secondaryColor)
+}
+.aboutUs .rightSide .btnGroup button.contact {
+    background: transparent;
+    color: var(--secondaryColor);
+}
+.aboutUs .rightSide .btnGroup button.contact:hover {
+    background-color: var(--secondaryColor);
+    color: #fff;
+}
+@media only screen and (max-width: 1275px) {
+    .aboutUs {
+        display: block;
+    }
+    .aboutUs .rightSide  {
+        margin-top: 60px;
+    }
+    .aboutUs .leftSide .aboutUsImg {
+        width: 70%;
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    .aboutUs .leftSide {
+        display: block;
+    }
+    .aboutUs .leftSide .aboutUsImg {
+        width: auto;
+        height: 450px;
+    }
+    .aboutUs .leftSide .ourFeature {
+        left: 0;
+        margin-top: 40px;
+    }
+    .aboutUs .leftSide .ourFeature .feature {
+        width: 100%;
+    }
+    .aboutUs .leftSide .ourFeature .feature img {
+        width: 35px;
+    }
+    .aboutUs .leftSide .ourFeature .feature h3 {
+        font-size: 20px;
+    }
+    .aboutUs .leftSide .ourFeature .feature p {
+        font-size: 15px;
+    }
+    .aboutUs .rightSide h3 {
+        font-size: 40px;
+    }
+    .aboutUs .rightSide p {
+        font-size: 16px;
+        margin-bottom: 24px;
+    }
+    .aboutUs .rightSide ul li {
+        font-size: 18px;
+        margin-left: 25px;
+    }
+    .aboutUs .rightSide ul li::after {
+        left: -30px;
+        width: 20px;
+        height: 20px;
+    }
+    .aboutUs .rightSide .btnGroup {
+        margin-top: 40px;
+    }
+    .aboutUs .rightSide .btnGroup button {
+        padding: 12px 28px;
+        font-size: 14px;
+    }
+    .aboutUs .rightSide .btnGroup button.contact {
+        margin-top: 10px;
+    }
+}
